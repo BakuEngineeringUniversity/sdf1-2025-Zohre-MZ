@@ -7,7 +7,7 @@ function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: true,  // Allows renderer process (HTML, JS) to access Node.js APIs
+      nodeIntegration: false,  // Allows renderer process (HTML, JS) to access Node.js APIs
       contextIsolation: false // Allow using Node.js features directly
     }
   });
@@ -16,7 +16,7 @@ function createWindow() {
   win.loadFile('index.html');
 
   // Open DevTools (optional)
-  win.webContents.openDevTools();
+/*   win.webContents.openDevTools(); */
 }
 
 // When Electron has finished initialization, create the window
